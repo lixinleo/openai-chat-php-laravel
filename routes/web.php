@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/mychat', function () {
-    return "hello world 2";
+    return view('index');
 })->name("mychat.index");
