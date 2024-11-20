@@ -20,7 +20,8 @@ Route::post("/mychat", function (Request $request) {
     //make a openai api call
     $client = OpenAI::client(env('OPENAI_API_KEY'));
     $result = $client->chat()->create([
-        'model' => 'gpt-4o-mini',
+        //'model' => 'gpt-4o-mini',
+        'model' => 'o1-mini',
         'messages' => [
             ['role' => 'user', 'content' => $request->input("question")],
         ],
